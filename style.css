@@ -1,0 +1,490 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 
+barevné schéma: https://coolors.co/2a2a28-68748d-ffd502-ffffff
+*/
+
+/*TEST*/
+:root {
+    --zluta: #FFD502;
+    --bila: white;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(fotky/barak.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav img {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    width: 100%;
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    gap: 2em;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: var(--bila);
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--zluta);
+    display: block;
+    margin: auto;
+    transition: 0.5s
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
+.text-box {
+    width: 90%;
+    color: var(--bila);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: var(--bila);
+}
+
+.cudlik {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--bila);
+    border: 1px solid var(--zluta);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.cudlik:hover {
+    border: 1px solid var(--zluta);
+    background: var(--zluta);
+    transition: 1s;
+}
+
+.down-text {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.p {
+    color: var(--bila);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 3em;
+    flex-direction: row;
+}
+
+.down-text-color {
+    flex-basis: 1px; 
+    background: var(--zluta);
+    border-radius: 6px;
+    padding: 20px 12px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-grow: 1;
+}
+
+.h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.down-text-color:hover {
+    transform: scale(1.05);
+}
+
+.inter {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.inter-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.inter-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgb(225, 213, 2)
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: var(--bila);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+.milan {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.milan-col {
+    flex-basis: 42%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.milan-col img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.milan-col p {
+    padding: 0;
+
+}
+
+.milan-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.hodnoceni {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.hodnoceni-col {
+    flex-basis: 40%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    background: #68748D;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.hodnoceni-col img {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 30px;
+    border-radius: 20%;
+}
+
+.hodnoceni-col p {
+    padding: 0;
+}
+
+.hodnoceni-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.hodnoceni-col .fa {
+    color: var(--zluta);
+}
+
+.interista {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(fotky/barak4.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.interista h1 {
+    color: var(--bila);
+    margin-bottom: 40px;
+    padding: 0;
+
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.ikony .fa {
+    color: #2A2A28;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+
+.sub-header {
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(fotky/barak.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: var(--bila);
+}
+
+.sub-header h1 {
+    margin-top: 100px;
+
+}
+
+.onas-content {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.onas-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.onas-col img {
+    width: 100%;
+
+}
+
+.onas-col h1 {
+    padding-top: 0;
+}
+
+.onas-col p {
+    padding: 15px 0 25px;
+}
+
+.druhy {
+    border: 1px solid var(--zluta);
+    background: transparent;
+    color: #2A2A28;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+
+}
+
+.test div {
+    position: relative;
+    overflow: hidden;
+}
+
+.test figure {
+    margin: 0;
+
+}
+
+.test img {
+    width: 100%;
+    height: auto;
+    transition: transoform 0.3s ease;
+}
+
+.test:hover img {
+    transform: scale(1.1);
+}
+
+.lokace {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.lokace iframe {
+    width: 100%;
+}
+
+.kontakt {
+    width: 80%;
+    margin: auto;
+}
+
+.kontakt div {
+    display: flex;
+    align-items: center;
+}
+
+.kontakt div .fa {
+    font-size: 28px;
+    color: var(--zluta);
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.kontakt div p {
+    padding: 0;
+}
+
+.kontakt div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #2A2A28;
+    font-weight: 400;
+}
+
+.kontakt button {
+    color: #2A2A28;
+}
+
+.kontakt-col input,
+.kontakt-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid var(--zluta);
+}
+
+.galerie {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.galerie-col {
+    flex-basis: 42%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.galerie-col img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.2s ease-out;
+}
+
+.galerie-col img:hover {
+    transform: scale(1.1);
+}
+
+.forza {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo {
+    width: 4.5em;
+    margin: 0.5em 1em;
+}
+
